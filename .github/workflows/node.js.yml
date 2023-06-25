@@ -23,4 +23,4 @@ jobs:
           node-version: 18.x
           cache: "npm"
       - run: npm ci
-      - run: npm test -- --ci --shard=${{ matrix.shard }}
+      - run: npm test -- --color --ci --shard=${{ matrix.shard }}
