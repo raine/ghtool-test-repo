@@ -5,3 +5,7 @@ tool = "jest"
 [typecheck]
 job_pattern = "build"
 tool = "tsc"
+
+[lint]
+job_pattern = "lint"
+tool = "eslint"
