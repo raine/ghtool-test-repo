@@ -23,9 +23,7 @@ jobs:
           node-version: 18.x
           cache: "npm"
       - run: yarn install --verbose
-      # Spam logs to make the progress bar stay visible longer
-      - run: cat /var/log/*.log /var/log/*.log /var/log/*.log || true
-      - run: yarn test -- --color --ci --shard=${{ matrix.shard }}
+      - run: yarn test --color --ci --shard=${{ matrix.shard }}
   build:
     runs-on: ubuntu-latest
 
@@ -37,8 +35,6 @@ jobs:
           node-version: 18.x
           cache: "npm"
       - run: yarn install --verbose
-      # Spam logs to make the progress bar stay visible longer
-      - run: cat /var/log/*.log /var/log/*.log /var/log/*.log || true
       - run: yarn build
   lint:
     runs-on: ubuntu-latest
@@ -51,6 +47,4 @@ jobs:
           node-version: 18.x
           cache: "npm"
       - run: yarn install --verbose
-      # Spam logs to make the progress bar stay visible longer
-      - run: cat /var/log/*.log /var/log/*.log /var/log/*.log || true
       - run: yarn lint
