@@ -9,3 +9,5 @@ type Foo = {
 const foo: Foo = {
   bar: 123,
 };
+
+() => {};
