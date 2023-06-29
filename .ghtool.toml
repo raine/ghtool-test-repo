@@ -1,3 +1,7 @@
 [test]
 job_pattern = "test"
-runner = "jest"
+tool = "jest"
+
+[typecheck]
+job_pattern = "build"
+tool = "tsc"
