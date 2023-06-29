@@ -36,5 +36,7 @@ jobs:
         with:
           node-version: 18.x
           cache: "npm"
-      - run: npm ci
+      - run: npm ci --verbose
+      # Spam logs to make the progress bar stay visible longer
+      - run: cat /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log || true
       - run: npm run build
