@@ -24,7 +24,7 @@ jobs:
           cache: "npm"
       - run: npm ci --verbose
       # Spam logs to make the progress bar stay visible longer
-      - run: cat /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log || true
+      - run: cat /var/log/*.log /var/log/*.log /var/log/*.log || true
       - run: npm test -- --color --ci --shard=${{ matrix.shard }}
   build:
     runs-on: ubuntu-latest
@@ -38,7 +38,7 @@ jobs:
           cache: "npm"
       - run: npm ci --verbose
       # Spam logs to make the progress bar stay visible longer
-      - run: cat /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log || true
+      - run: cat /var/log/*.log /var/log/*.log /var/log/*.log || true
       - run: npm run build
   lint:
     runs-on: ubuntu-latest
@@ -52,5 +52,5 @@ jobs:
           cache: "npm"
       - run: npm ci --verbose
       # Spam logs to make the progress bar stay visible longer
-      - run: cat /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log || true
+      - run: cat /var/log/*.log /var/log/*.log /var/log/*.log || true
       - run: npm run lint
