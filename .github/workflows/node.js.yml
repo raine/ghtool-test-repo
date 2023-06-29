@@ -40,3 +40,17 @@ jobs:
       # Spam logs to make the progress bar stay visible longer
       - run: cat /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log || true
       - run: npm run build
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: "npm"
+      - run: npm ci --verbose
+      # Spam logs to make the progress bar stay visible longer
+      - run: cat /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log /var/log/*.log || true
+      - run: npm run lint
