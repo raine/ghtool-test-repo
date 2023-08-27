@@ -2,7 +2,7 @@
 job_pattern = "test"
 tool = "jest"
 
-[typecheck]
+[build]
 job_pattern = "build"
 tool = "tsc"
 
