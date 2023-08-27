@@ -4,6 +4,4 @@ type Foo = {
   bar: string;
 };
 
-() => {};
-
 console.log("foo");
